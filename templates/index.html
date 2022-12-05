@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id" translate="no">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-P5YL83NSJ8');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="description" content="Coder browser By:JSKUN">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color">
+    <title> Coder Browser</title>
+    <link rel="icon" href="{{logo}}">
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+
+  <body ondragstart="return false;">
+    <div class="pelengkap" style="display:grid; justify-content: space-between;">
+      <ul class="menuu" name="">
+          <li>
+              <div class="time"></div>
+          </li>
+          <li>
+              <a href="https://github.com/JSKUN2/coderbrowser" target="_blank" aria-label="code"><button type="button" class="code" aria-label="code">
+              </button></a>
+          </li>
+      </ul>
+    </div>
+      <section style="text-align: center;">
+          <div class="main">
+              <img src="{{ logo }}" width="40%" height="40%" alt="icon" style="margin: bottom 1px;">
+              <br>
+              <p style="margin: 1px; color: white;">Open Source Open Mind</p>
+              <div class="search">
+                <input type="text" name="" class="query" placeholder="Cari di SAYURASEM" value="" style="background-color:#b0c4de; color: black; background-size: 500px;" >
+                  <div class="icons">
+                      <div><img src="{{ img1 }}" alt="button" width="20" height="20"></div>
+                      <div><img src="{{img2}}" alt="duck" width="20" height="20" style="clip-path:circle();"></div>
+                  </div>
+                  <ul class="menuw">
+                      <li><a aria-label="discord" class="menu"href="https://discord.com/" target="_blank"> <img src="{{img3}}" alt="discord" width="48" height="48" style="clip-path:circle();"></a></li>
+                      <li><a aria-label="bootstrap" class="menu"href="https://getbootstrap.com/" target="_blank"> <img src="{{img4}}" alt="bootstrap" width="48" height="48" style="clip-path:circle();"></a></li>
+                      <li><a aria-label="github" class="menu"href="https://github.com" target="_blank"> <img src="{{img5}}" alt="github" width="48" height="48" style="clip-path:circle();"></a></li>
+                      <li><a aria-label="stackoverflow" class="menu"href="https://stackoverflow.com/"target="_blank"><img src="{{img6}}" alt="stackoverflow" width="48" height="48" style="clip-path:circle();"></a></li>  
+                      <li><a aria-label="youtube" class="menu"href="https://youtube.com" target="_blank"><img src="{{img7}}" alt="youtube" width="48" height="48" style="clip-path:circle();"></a></li>
+                  </ul>
+              </div>
+              </div>
+          </div>
+      </section>
+    <script>
+      var time = document.querySelector('.time');
+
+      function updateClock() {
+        var now = new Date();
+        var hours = now.getHours();
+        var minutes = now.getMinutes();
+
+        hours = hours % 12 || 12;
+        minutes = minutes < 10 ? '0' + minutes : minutes;
+
+        var period = hours < 12 ? 'PM' : 'AM';
+        time.innerHTML = hours + ':' + minutes  + ' ' + period;
+        
+        
+      }
+
+      updateClock();
+      setInterval(updateClock, 1000);
+
+
+      let query = document.querySelector('.query');
+
+      window.addEventListener('keydown', checkKeyPress, false)
+
+      function checkKeyPress(key){
+          if (key.keyCode == '13'){
+              let url = 'https://cse.google.com/cse?cx=70ac32d41f8334090#gsc.tab=0&gsc.q='+query.value
+              window.open(url,'_self');
+
+          }
+      }
+    </script>
+    <style>
+      body {
+        background-image: url({{url_for('static', filename='/IMG/bg1.png' ) }});
+      }
+    </style>
+</body>
+
+</html>
+
+

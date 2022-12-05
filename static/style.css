@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+    cursor:default;
+  }
+  .time {
+    font-size: 30px;
+    font-weight: bold;
+    color:white;
+  }
+
+  *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+  }
+
+  section{
+      position: relative;
+      width: 100%;
+      height: 80vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  section .main{
+      width: 500px;
+      margin: 0 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+  }
+  section .main .search{
+      position: relative;
+      width: 100%;
+      margin-top: 20px;
+  }
+  section .main .search .query{
+      margin: auto;
+      display:inline-block;
+      text-align:center;
+      height:100%;
+      padding: 0 5px;
+      width: 100%;
+      padding: 13px;
+      border: 1px solid darkslategrey;
+      outline: none;
+      font-size: 16px;
+      border-radius: 30px;
+      padding-left: 45px;
+      padding-right: 60px;
+  }
+  section .main .search .icons{
+      position:absolute;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 20px;
+      align-items: center;
+      pointer-events: none;
+  }
+  section .main .search .icons img {
+      max-width: 100%;   
+  }
+
+  .searchbtn:hover{
+      border: 1px solid #ccc
+  }
+  .menuw{
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+  }
+  .menuw li{
+      margin: auto;
+      display:inline-block;
+      text-align:center;
+      height:100%;
+      padding: 0 5px;
+  }
+  .menuu{
+      list-style-type: none;
+      justify-content:left;
+      overflow: hidden;
+      transform: translateX(+3%)
+  }
+  .menuu li{
+      display: inline-block;
+  }
+  .menuu li a{
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 5px;
+      text-decoration: none;
+      font-size: 17px;
+      font-family: 'Times New Roman'
+  }
+  input::placeholder {
+    opacity: 1;
+  }
+  .code{
+    font-size: 25px;
+    font-weight: bold;
+    color:white;
+    border:transparent;
+    background:white;
+  }
+  .code:hover{
+    height: 28px;
+    width:28px;
+    border-radius:10px;
+    border:transparent;
+    background:#a9a9a9;
+  }
+
+
+
